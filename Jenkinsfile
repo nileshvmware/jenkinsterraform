@@ -39,7 +39,7 @@ pipeline {
                             steps {
                                 echo '=== Building simple-java-maven-app Docker Image ==='
                                 script {
-                                    app = docker.build("rpidugu/simple-java-maven-app")
+                                    app = docker.build("nileshvmware/simple-java-maven-app")
                                 }
                             }
                 }
@@ -58,12 +58,8 @@ pipeline {
                                     }
                                 }
                             }
-                }
-                stage('Remove local images') {
-                            steps {
-                                echo '=== Delete the local docker images ==='
-                                sh("docker rmi -f rpidugu/simple-java-maven-app:latest || :")
-                                sh("docker rmi -f rpidugu/simple-java-maven-app:$SHORT_COMMIT || :")
+               
+                
                 }
             }
     }
