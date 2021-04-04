@@ -4,7 +4,7 @@ pipeline {
         pollSCM "* * * * *"
      }
     environment {
-        GITHUB = credentials('gitHubCredentials')
+        git 'https://github.com/nileshvmware/simple-java-maven-app
 
     }
 
