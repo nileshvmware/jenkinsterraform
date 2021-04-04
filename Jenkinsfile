@@ -4,7 +4,7 @@ pipeline {
         pollSCM "* * * * *"
      }
     environment {
-        git 'https://github.com/nileshvmware/simple-java-maven-app
+        git 'https://github.com/nileshvmware/simple-java-maven-app'
 
     }
 
